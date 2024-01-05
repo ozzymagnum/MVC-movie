@@ -1,0 +1,141 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,300&display=swap" rel="stylesheet">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - MVC_movie_app</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/MVC_movie_app.styles.css" asp-append-version="true" />
+</head>
+
+<body>
+   
+    </div>
+    <div class="bg-image">
+            <ul>
+            <partial name="_LoginPartial" />
+                @* <li class="navbar"><a href="default.asp">Log in</a></li> *@
+            </ul>
+            <div>
+        <h1 class="image-text">HollyView</h1>
+        <p class="image-text1">The Action has just begun</p>
+        </div>
+        <div>
+        <button class="styled-button">EXPLORE THE ACTION</button>
+        </div>
+    </div>
+    <div>
+        <h2 class="h2list">List of all the movies</h2>
+    </div>
+    <div class="input-group">
+        <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+        <button type="button" class="btn btn-outline-primary" data-mdb-ripple-init>search</button>
+    </div>
+    
+    <div class="container-card">
+        <div class="container">
+            <!-- First Row of Cards -->
+            <div class="row custom-row1">
+                <!-- First Card -->
+                <div class="col-md-4">
+                    <div class="card1" style="width: 15rem;">
+                        <img class="card-img-top" src="~/images/avengers.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Avengers</h5>
+                            <p class="card-text">Avengers: Endgame is a 2019 American superhero film.</p>
+                            <hr>
+                            <a href="#" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Second Card -->
+                <div class="col-md-4">
+                    <div class="card2" style="width: 15rem;">
+                        <img class="card-img-top" src="/images/dark knight.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">The Dark Knight</h5>
+                            <p class="card-text">Batman begin an assault on Gotham's organised crime.</p>
+                            <hr>
+                            <a href="#" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Third Card -->
+                <div class="col-md-4">
+                    <div class="card3" style="width: 15rem;">
+                        <img class="card-img-top" src="/images/gladiator.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Gladiator</h5>
+                            <p class="card-text">Commodus takes over power and demotes Maximus.</p>
+                            <hr>
+                            <a href="#" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Second Row of Cards -->
+            <div class="row custom-row2">
+                <!-- Fourth Card -->
+                <div class="col-md-4">
+                    <div class="card4" style="width: 15rem;">
+                        <img class="card-img-top" src="/images/maxresdefault.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title4">Inception</h5>
+                            <p class="card-text">A thief who steals corporate secrets.</p>
+                            <hr>
+                            <a href="#" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fifth Card -->
+                <div class="col-md-4">
+                    <div class="card5" style="width: 15rem;">
+                        <img class="card-img-top" src="/images/joker.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Joker</h5>
+                            <p class="card-text">Arthur Fleck, a party clown, leads an improverished life.</p>
+                            <hr>
+                            <a href="#" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sixth Card -->
+                <div class="col-md-4">
+                    <div class="card6" style="width: 15rem;">
+                        <img class="card-img-top" src="/images/shutter island.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Shutter island</h5>
+                            <p class="card-text">Teddy Daniels and Chuck Aule, two US marshals.</p>
+                            <hr>
+                            <a href="#" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+   </div>
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2023 - MVC_movie_app - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
